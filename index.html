@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>City Driver 2D (GTA2 vibe)</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="game" width="1280" height="720" aria-label="GTA2-like game"></canvas>
+
+    <aside class="hud">
+      <h1>CITY DRIVER</h1>
+      <p class="subtitle">GTA2-inspired top-down prototype</p>
+      <div class="line"><span>💵 MONEY</span><strong id="money">$0</strong></div>
+      <div class="line"><span>⭐ WANTED</span><strong id="wanted">0.0</strong></div>
+      <div class="line"><span>🚘 SPEED</span><strong id="speed">0</strong></div>
+      <div class="line"><span>🎯 TASK</span><strong id="task">Loading...</strong></div>
+      <div class="line"><span>🚔 COPS</span><strong id="cops">0</strong></div>
+      <div class="controls">
+        <div><kbd>WASD</kbd>/<kbd>ARROWS</kbd> drive</div>
+        <div><kbd>SPACE</kbd> brake</div>
+        <div><kbd>R</kbd> restart</div>
+      </div>
+    </aside>
+
+    <script type="module" src="game.js"></script>
+  </body>
+</html>
