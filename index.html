@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neo City 2.5D</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <section class="hud">
+        <h1>Neo City 2.5D</h1>
+        <p class="muted">GTA2-inspired prototype на HTML/CSS/JS</p>
+        <div class="stats">
+          <div><span>💵 Деньги</span><strong id="money">0</strong></div>
+          <div><span>⭐ Розыск</span><strong id="wanted">0</strong></div>
+          <div><span>🎯 Миссия</span><strong id="mission">Загрузка...</strong></div>
+          <div><span>🚗 Скорость</span><strong id="speed">0</strong></div>
+        </div>
+        <div class="controls">
+          <p><kbd>WASD</kbd>/<kbd>↑↓←→</kbd> — управление</p>
+          <p><kbd>Space</kbd> — тормоз/дрифт</p>
+          <p><kbd>R</kbd> — перезапуск</p>
+        </div>
+      </section>
+      <section class="game-wrap">
+        <canvas id="game" width="1280" height="720" aria-label="Игровое поле"></canvas>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/howler@2.2.4/dist/howler.min.js"></script>
+    <script type="module" src="game.js"></script>
+  </body>
+</html>
