@@ -3,23 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>City Driver 2D (GTA2 vibe)</title>
+    <title>Neon Streets 2.5D</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <canvas id="game" width="1280" height="720" aria-label="GTA2-like game"></canvas>
+    <canvas id="game" width="1280" height="720" aria-label="2.5D city driving game"></canvas>
 
     <aside class="hud">
-      <h1>CITY DRIVER</h1>
-      <p class="subtitle">GTA2-inspired top-down prototype</p>
+      <h1>NEON STREETS</h1>
+      <p class="subtitle">GTA2-style arcade in 2.5D view</p>
       <div class="line"><span>💵 MONEY</span><strong id="money">$0</strong></div>
       <div class="line"><span>⭐ WANTED</span><strong id="wanted">0.0</strong></div>
-      <div class="line"><span>🚘 SPEED</span><strong id="speed">0</strong></div>
+      <div class="line"><span>🚘 SPEED</span><strong id="speed">0 km/h</strong></div>
       <div class="line"><span>🎯 TASK</span><strong id="task">Loading...</strong></div>
       <div class="line"><span>🚔 COPS</span><strong id="cops">0</strong></div>
+      <div class="line"><span>⚡ BOOST</span><strong id="boost">READY</strong></div>
       <div class="controls">
-        <div><kbd>WASD</kbd>/<kbd>ARROWS</kbd> drive</div>
-        <div><kbd>SPACE</kbd> brake</div>
+        <div><kbd>WASD</kbd> / <kbd>ARROWS</kbd> steer + drive</div>
+        <div><kbd>SPACE</kbd> handbrake drift</div>
+        <div><kbd>SHIFT</kbd> short nitro boost</div>
         <div><kbd>R</kbd> restart</div>
       </div>
     </aside>

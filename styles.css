@@ -1,62 +1,88 @@
 :root {
-  --bg: #0d1119;
-  --road: #31384a;
-  --lane: #8d94ab;
-  --block: #1a2336;
-  --park: #1a3f2d;
-  --hud: #0a0e18ee;
-  --text: #f6f6ff;
-  --accent: #ffde59;
+  --bg: #080b14;
+  --hud: #0a1020d8;
+  --line: #27375e;
+  --text: #f4f8ff;
+  --accent: #64f8ff;
+  --accent2: #ffd76a;
 }
+
 * { box-sizing: border-box; }
+
 body {
   margin: 0;
   overflow: hidden;
-  background: var(--bg);
   color: var(--text);
-  font-family: 'Segoe UI', Tahoma, sans-serif;
+  font-family: Inter, Segoe UI, Roboto, sans-serif;
+  background:
+    radial-gradient(circle at 20% 20%, #152344 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, #201742 0%, transparent 42%),
+    var(--bg);
 }
+
 #game {
   width: 100vw;
   height: 100vh;
   display: block;
-  image-rendering: pixelated;
+  image-rendering: crisp-edges;
 }
+
 .hud {
   position: fixed;
   top: 16px;
   left: 16px;
-  width: 300px;
+  width: 320px;
   padding: 14px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
   background: var(--hud);
-  border: 1px solid #293248;
-  border-radius: 10px;
-  backdrop-filter: blur(6px);
+  box-shadow: 0 12px 30px #02050faa;
+  backdrop-filter: blur(8px);
 }
-.hud h1 { margin: 0; letter-spacing: 1px; font-size: 1.15rem; }
-.subtitle { margin: 4px 0 10px; color: #b9c5e8; font-size: .88rem; }
+
+.hud h1 {
+  margin: 0;
+  letter-spacing: 1.4px;
+  font-size: 1.2rem;
+  color: var(--accent);
+}
+
+.subtitle {
+  margin: 4px 0 10px;
+  color: #c4d0f2;
+  font-size: 0.88rem;
+}
+
 .line {
   display: flex;
   justify-content: space-between;
+  gap: 12px;
   padding: 7px 8px;
   margin-bottom: 6px;
-  border: 1px solid #242f47;
+  border: 1px solid #223154;
   border-radius: 8px;
-  background: #11182a;
+  background: #0f1730;
 }
-.line strong { color: var(--accent); }
+
+.line strong {
+  color: var(--accent2);
+  text-shadow: 0 0 10px #5de8ff66;
+}
+
 .controls {
   margin-top: 10px;
-  border-top: 1px dashed #2c3751;
+  border-top: 1px dashed #32446d;
   padding-top: 10px;
-  color: #d2dbf5;
-  font-size: .86rem;
+  color: #d7e3ff;
+  font-size: 0.85rem;
   display: grid;
   gap: 6px;
 }
+
 kbd {
   padding: 2px 6px;
-  border: 1px solid #384564;
   border-radius: 5px;
-  background: #0f1524;
+  border: 1px solid #3b4d73;
+  background: #0a1124;
+  color: #d8ecff;
 }
