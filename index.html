@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
     <title>Neon Streets 2.5D</title>
-    <link rel="stylesheet" href="styles.css?v=2026.02.08-2" />
+    <link id="app-style" rel="stylesheet" href="" />
   </head>
   <body>
     <canvas id="game" width="1280" height="720" aria-label="2.5D city driving game"></canvas>
@@ -26,8 +29,12 @@
       </div>
     </aside>
 
-    <div class="build-tag">build 2026.02.08-2</div>
+    <div class="build-tag">build 2026.02.08-3</div>
 
-    <script type="module" src="game.js?v=2026.02.08-2"></script>
+    <script type="module">
+      const v = Date.now();
+      document.getElementById("app-style").href = `styles.css?v=${v}`;
+      import(`./game.js?v=${v}`);
+    </script>
   </body>
 </html>
