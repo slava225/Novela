@@ -86,3 +86,17 @@ kbd {
   background: #0a1124;
   color: #d8ecff;
 }
+
+
+.build-tag {
+  position: fixed;
+  right: 16px;
+  bottom: 14px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #31466f;
+  background: #0b1225cc;
+  color: #9dc2ff;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+}
